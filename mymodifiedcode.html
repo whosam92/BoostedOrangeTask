@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/css/boosted.min.css"
+      rel="stylesheet"
+      integrity="sha384-laZ3JUZ5Ln2YqhfBvadDpNyBo7w5qmWaRnnXuRwNhJeTEFuSdGbzl4ZGHAEnTozR"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- Main Row with two equal sections -->
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Left side: Carousel with images -->
+        <div class="col-4">
+          <!-- Carousel Container -->
+          <div
+            id="carouselExampleIndicators"
+            class="carousel slide"
+            data-bs-ride="carousel"
+>
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+            </div>
+            <div class="carousel-inner">
+              <!-- Slide 1 -->
+              <div class="carousel-item active">
+                <img src="img1.jpg" class="d-block w-100" />
+              </div>
+              <!-- Slide 2 -->
+              <div class="carousel-item active">
+                <img src="img2.jpg" class="d-block w-100" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right side: Login form -->
+        <div class="col-8">
+          <form class="p-3">
+            <fieldset>
+
+              <!-- Navbar -->
+              <header>
+                <nav class="navbar">
+                  <div class="container-fluid border-bottom">
+                    <div class="navbar-brand">
+                      <a class="stretched-link" href="#">
+                        <img
+                          src="logoOrange.png"
+                          width="200"
+                          height="200"
+                          loading="lazy"
+                        />
+                      </a>
+                    </div>
+
+                    <!-- Right-aligned nav links -->
+                    <div class="d-flex ms-auto">
+                      <div>
+                        <a
+                          class="nav-link-primary px-3"
+                          style="text-decoration: none"
+                          href="#"
+                          >Help</a
+                        >
+                      </div>
+                      <div>
+                        <a
+                          class="nav-link-primary"
+                          style="text-decoration: none"
+                          href="#"
+                          >Terms & Conditions</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </nav>
+              </header>
+
+              <div style="width: 50vw; padding: 2rem;">
+              <h1 class="title mt-4">Create an account</h1>
+
+              <div>
+                <label for="requiredTextInput" class="form-label is-required"
+                  >Email Address<span class="visually-hidden">
+                    (required)</span
+                  ></label
+                >
+                <input
+                  type="text"
+                  id="requiredTextInput"
+                  class="form-control"
+                  placeholder=""
+                  required
+                />
+                <small class="text-secondary-65">eg:username@domain.com</small>
+              </div>
+              <div>
+                <label for="requiredSelect" class="form-label is-required"
+                  >Mobile<span class="visually-hidden"> (required)</span></label
+                >
+                <input
+                  type="text"
+                  id="requiredTextInput"
+                  class="form-control"
+                  placeholder=""
+                  required
+                />
+                <small>eg:077***********</small>
+                <br /><br />
+                <div class="mb-1 form-group col-lg-6">
+                  <label for="validationServer02" class="is-required"
+                    >Create Password<span class="sr-only">
+                      (required)</span
+                    ></label
+                  >
+                  <div class="input-group">
+                    <input
+                      name="password"
+                      type="password"
+                      class="form-control password col-11 pr-0"
+                      id="password"
+                      value=""
+                    />
+                    <div class="d-flex align-items-center" onclick="showPass()">
+                      <i
+                        class="btn btn-light border-left-0"
+                        aria-hidden="true"
+                      ></i>
+                    </div>
+                  </div>
+                  <small
+                    >The Password should be between 6-18 characters.
+                  </small>
+                  <div
+                    class="invalid-feedback password-validation-message font-size-7 mb-3"
+                  >
+                    The password should be at least (8 characters, 1 uppercase,
+                    1 number & 1 special character).
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-check mt-3">
+                <div>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="requiredFieldsetCheck"
+                    required
+                  />
+                  <label class="form-check-label" for="requiredFieldsetCheck"
+                    >I agree to the
+                    <a href="#">terms and conditions</a> Orange<span
+                      class="visually-hidden"
+                    >
+                      (required)</span
+                    ></label
+                  >
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="requiredFieldsetCheck"
+                    required
+                  />
+                </div>
+                <br />
+                <br />
+                <div>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="requiredFieldsetCheck"
+                    required
+                  />
+                  <label class="form-check-label" for="requiredFieldsetCheck"
+                    >Receive Coding Academy Newsletter.<span
+                      class="visually-hidden"
+                    >
+                      (required)</span
+                    ></label
+                  >
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="requiredFieldsetCheck"
+                    required
+                  />
+                </div>
+                <div>
+                  <br />
+                  <br />
+
+                  <div class="d-grid gap-3">
+                    <button class="btn btn-primary" type="button">
+                      Sign Up
+                    </button>
+                    <button class="btn btn-secondary" type="button">
+                      Already have an account? Login
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+</div>
+              <div>
+               
+    </div>
+
+    <!-- JS script link -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/js/boosted.bundle.min.js"
+      integrity="sha384-3RoJImQ+Yz4jAyP6xW29kJhqJOE3rdjuu9wkNycjCuDnGAtC/crm79mLcwj1w2o/"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
