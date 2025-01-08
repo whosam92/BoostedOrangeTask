@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Details</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/css/boosted.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1>Welcome!</h1>
+      <p id="yourName"></p>
+      <p id="email"></p>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const UserName = localStorage.getItem("yourName");
+        const Email = localStorage.getItem("email");
+        
+        if (UserName && Email) {
+          document.getElementById("yourName").textContent = `Name: ${UserName}`;
+          document.getElementById("email").textContent = `Email: ${Email}`;
+        } else {
+          document.body.innerHTML =
+            "<p>No user data found. Please sign up first.</p>";
+        }
+      });
+    </script>
+  </body>
+</html>
